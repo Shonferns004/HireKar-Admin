@@ -1,6 +1,6 @@
 
 import React, { useState } from 'react';
-import { HashRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import { Login } from './pages/Login';
 import { Sidebar } from './components/SideBar';
 import { TopNav } from './components/TopNav';
@@ -8,6 +8,8 @@ import { Dashboard } from './pages/Dashboard';
 import { AuthProvider, useAuth } from './context/AuthContext';
 import { Users } from './pages/Users';
 import { UserDetail } from './pages/UserDetail';
+import { AITools } from './pages/Courses';
+import CourseDetails from './pages/CourseDetails';
 
 
 const PrivateRoute = ({ children }) => {
@@ -40,7 +42,10 @@ const DashboardLayout = () => {
             <Route path="/" element={<Dashboard />} />
             <Route path="/analytics" element={<Dashboard />} />
             <Route path="/users" element={<Users />} />
-            <Route path="/users/:userId" element={<UserDetail />} />
+            <Route path="/users" element={<Users />} />
+            <Route path="/courses" element={<AITools />} />
+            <Route path="/courses" element={<AITools />} />
+            <Route path="/course-details/:id" element={<CourseDetails />} />
             <Route path="*" element={<div className="p-8 text-slate-500 font-bold">Page coming soon...</div>} />
           </Routes>
         </main>

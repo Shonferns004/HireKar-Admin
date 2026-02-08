@@ -13,12 +13,14 @@ import {
   GooglePodcastsLogo,
   UserCircleGear,
   UserFocus,
+  Books,
   
 } from 'phosphor-react';
 
 const navItems = [
   { id: 'dashboard', label: 'Dashboard', icon: GooglePodcastsLogo , path: '/' },
-  { id: 'users', label: 'Users', icon: UserFocus  , path: '/users' },,
+  { id: 'users', label: 'Users', icon: UserFocus  , path: '/users' },
+  { id: 'course', label: 'Courses', icon: Books  , path: '/courses' },
   { id: 'reports', label: 'Reports', icon: FileText, path: '/reports' },
 ];
 
